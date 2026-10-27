@@ -21,8 +21,8 @@
 |变量名|值示例 / 说明|必填|备注|
 |---|---|---|---|
 |`NINEBOT_DEVICE_ID`|`1234567890`（你的设备唯一标识）|✅|单账号时填写单个 `deviceId`|
-|`NINEBOT_AUTHORIZATION`|`Bearer xyz789...`（你的授权令牌）|✅|单账号时填写单个 `authorization`|
-|`NINEBOT_ACCOUNTS`|`[{"deviceId":"123","authorization":"Bearer xyz","name":"账号1"},{"deviceId":"456","authorization":"Bearer abc","name":"账号2"}]`|❌|**多账号时使用**，JSON 数组格式（需压缩为单行，无换行符）|
+|`NINEBOT_AUTHORIZATION`|`xyz789...`（你的授权令牌，直接填抓包得到的 JWT 原文，无需 Bearer 前缀）|✅|单账号时填写单个 `authorization`|
+|`NINEBOT_ACCOUNTS`|`[{"deviceId":"123","authorization":"xyz","name":"账号1"},{"deviceId":"456","authorization":"abc","name":"账号2"}]`|❌|**多账号时使用**，JSON 数组格式（需压缩为单行，无换行符）|
 |`BARK_KEY`|`xxxxxxxxxxxxxxxx`（你的 BARK 推送设备密钥）|❌|选填，用于接收签到结果通知（需配合 BARK 应用）|
 |`BARK_URL`|`https://api.day.app`（默认值）|❌|选填，自定义 BARK 服务器地址（默认官方地址）|
 |`BARK_GROUP`|`九号签到`（推送分组名称）|❌|选填，推送消息的分组标签|
